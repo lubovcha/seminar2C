@@ -4,6 +4,15 @@
 // 85 -> 8
 // Random rnd = new Random();
 
-int n = new Random().Next(10, 100); 
+int n = new Random().Next(10, 100); // эти две строчки просто выводят случайное число
 System.Console.WriteLine(n);
 
+int d1 = n / 10; // 63/10=6 (деление нацело)
+int d2 = n % 10; // 63 % 10 = 3 - остаток 3 (деление с остатком)
+
+int max = d1;
+
+if (max < d2){
+    max = d2;
+}
+System.Console.WriteLine($"Максимальная цифра числа {n} -> {max}"); // выдает максимальную цифру числа 97 = максимальная цифра числа 97 -> 9
